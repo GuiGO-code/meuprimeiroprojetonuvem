@@ -6,25 +6,58 @@
     <title>Computação em Nuvem</title>
     <style>
       :root {
-        --bg: #0b1220;
-        --card: #0f1a33;
-        --text: #e6eefc;
-        --muted: #b6c3e6;
-        --accent: #7aa2ff;
-        --border: rgba(255, 255, 255, 0.12);
+        --bg: #ffffff;
+        --card: #ffffff;
+        --text: #000000;
+        --muted: #333333;
+        --accent: #7a0000;
+        --border: rgba(0, 0, 0, 0.12);
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        background: radial-gradient(1200px 600px at 20% 0%, rgba(122,162,255,0.25), transparent 55%),
-          radial-gradient(900px 500px at 90% 20%, rgba(99, 241, 190, 0.18), transparent 60%),
-          var(--bg);
+        background: var(--bg);
         color: var(--text);
         line-height: 1.6;
       }
-      header {
-        padding: 56px 18px 24px;
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 14px 18px;
+        background: #7a0000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+      .site-header .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .brand small {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      nav a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+      nav a:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.14);
+      }
+      .hero {
+        padding: 32px 18px 24px;
       }
       main {
         padding: 0 18px 56px;
@@ -34,11 +67,10 @@
         margin: 0 auto;
       }
       .card {
-        background: rgba(15, 26, 51, 0.85);
+        background: var(--card);
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 22px;
-        backdrop-filter: blur(10px);
       }
       h1 {
         margin: 0 0 10px;
@@ -59,10 +91,20 @@
       li { margin: 8px 0; color: var(--text); }
       a { color: var(--accent); }
       footer {
-        padding: 18px;
-        color: var(--muted);
+        padding: 20px 18px;
+        background: #7a0000;
+        color: #ffffff;
         text-align: center;
-        border-top: 1px solid var(--border);
+        border-top: 1px solid rgb(255, 255, 255);
+      }
+      footer a { color: #ffffff; }
+      footer a:hover { color: rgba(255, 255, 255, 0.9); }
+      footer .links {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 8px;
       }
       .pill {
         display: inline-block;
@@ -76,7 +118,20 @@
     </style>
   </head>
   <body>
-    <header class="container">
+    <header class="site-header">
+      <div class="container bar">
+        <div class="brand">
+          <span>Computação em Nuvem</span>
+          <small>Cloud Computing</small>
+        </div>
+        <nav aria-label="Navegação principal">
+          <a href="#explicacao">Explicação</a>
+          <a href="#exemplos">Exemplos</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero container" aria-label="Introdução">
       <div class="card">
         <h1>O que é Computação em Nuvem?</h1>
         <p class="subtitle">
@@ -85,11 +140,11 @@
         </p>
         <div class="pill">Site simples em HTML</div>
       </div>
-    </header>
+    </section>
 
     <main class="container">
       <div class="card">
-        <h2>Explicação</h2>
+        <h2 id="explicacao">Explicação</h2>
         <p>
           Em vez de comprar e manter computadores e servidores próprios (infraestrutura local), você pode “alugar”
           capacidade de processamento e serviços prontos de provedores de nuvem. Isso ajuda a reduzir custos iniciais,
@@ -101,7 +156,7 @@
           backups, monitoramento e recursos de segurança.
         </p>
 
-        <h2>Exemplos de serviços em nuvem</h2>
+        <h2 id="exemplos">Exemplos de serviços em nuvem</h2>
         <ul>
           <li><strong>Armazenamento</strong>: Google Drive, OneDrive, Dropbox, Amazon S3</li>
           <li><strong>Computação (servidores/VMs)</strong>: Amazon EC2, Azure Virtual Machines, Google Compute Engine</li>
@@ -114,7 +169,12 @@
     </main>
 
     <footer>
-      Feito com HTML + CSS. Abra o arquivo <strong>index.html</strong> no navegador.
+      <div>Feito com HTML + CSS. Abra o arquivo <strong>index.html</strong> no navegador.</div>
+      <div class="links" aria-label="Links do rodapé">
+        <a href="#explicacao">Voltar para Explicação</a>
+        <a href="#exemplos">Voltar para Exemplos</a>
+        <a href="#">Topo</a>
+      </div>
     </footer>
   </body>
 </html>
