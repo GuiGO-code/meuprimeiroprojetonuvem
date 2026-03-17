@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computação em Nuvem</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --card: #0f1a33;
+        --text: #e6eefc;
+        --muted: #b6c3e6;
+        --accent: #7aa2ff;
+        --border: rgba(255, 255, 255, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: radial-gradient(1200px 600px at 20% 0%, rgba(122,162,255,0.25), transparent 55%),
+          radial-gradient(900px 500px at 90% 20%, rgba(99, 241, 190, 0.18), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      header {
+        padding: 56px 18px 24px;
+      }
+      main {
+        padding: 0 18px 56px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .card {
+        background: rgba(15, 26, 51, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 22px;
+        backdrop-filter: blur(10px);
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(1.9rem, 3vw, 2.6rem);
+        letter-spacing: -0.02em;
+      }
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        max-width: 70ch;
+      }
+      h2 {
+        margin: 18px 0 10px;
+        font-size: 1.25rem;
+      }
+      p { margin: 10px 0; color: var(--text); }
+      ul { margin: 10px 0 0; padding-left: 20px; }
+      li { margin: 8px 0; color: var(--text); }
+      a { color: var(--accent); }
+      footer {
+        padding: 18px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+      .pill {
+        display: inline-block;
+        padding: 4px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="card">
+        <h1>O que é Computação em Nuvem?</h1>
+        <p class="subtitle">
+          Computação em nuvem (cloud computing) é um modelo em que recursos de tecnologia — como servidores, armazenamento,
+          bancos de dados e softwares — são disponibilizados pela internet, sob demanda, com pagamento conforme o uso.
+        </p>
+        <div class="pill">Site simples em HTML</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="card">
+        <h2>Explicação</h2>
+        <p>
+          Em vez de comprar e manter computadores e servidores próprios (infraestrutura local), você pode “alugar”
+          capacidade de processamento e serviços prontos de provedores de nuvem. Isso ajuda a reduzir custos iniciais,
+          ganhar flexibilidade e escalar rapidamente quando a demanda aumenta.
+        </p>
+        <p>
+          Na prática, empresas e pessoas usam a nuvem para hospedar sites e aplicativos, salvar arquivos com segurança,
+          executar análises de dados e automatizar tarefas. Os serviços normalmente oferecem alta disponibilidade,
+          backups, monitoramento e recursos de segurança.
+        </p>
+
+        <h2>Exemplos de serviços em nuvem</h2>
+        <ul>
+          <li><strong>Armazenamento</strong>: Google Drive, OneDrive, Dropbox, Amazon S3</li>
+          <li><strong>Computação (servidores/VMs)</strong>: Amazon EC2, Azure Virtual Machines, Google Compute Engine</li>
+          <li><strong>Banco de dados gerenciado</strong>: Amazon RDS, Azure SQL Database, Google Cloud SQL</li>
+          <li><strong>Hospedagem de aplicações</strong>: Vercel, Netlify, Azure App Service, Google App Engine</li>
+          <li><strong>Contêineres e Kubernetes</strong>: Amazon EKS, Azure AKS, Google GKE</li>
+          <li><strong>Funções serverless</strong>: AWS Lambda, Azure Functions, Google Cloud Functions</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      Feito com HTML + CSS. Abra o arquivo <strong>index.html</strong> no navegador.
+    </footer>
+  </body>
+</html>
+
